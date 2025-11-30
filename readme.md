@@ -1,8 +1,19 @@
 # Playwright Automation Project (TypeScript)
 
-![Build](https://img.shields.io/github/actions/workflow/status/username/repo/playwright.yml?style=flat-square)
-![Node.js](https://img.shields.io/node/v/v?style=flat-square)
-![License](https://img.shields.io/github/license/username/repo?style=flat-square)
+<!-- Build Status badge: shows pass/fail for your GitHub Actions workflow -->
+![Playwright Tests](https://github.com/ziedhannachi/playwright-tests/actions/workflows/playwright.yml/badge.svg)
+
+<!-- Playwright version badge -->
+![Playwright](https://img.shields.io/badge/Playwright-1.44.0-blue?logo=playwright)
+
+<!-- Node.js version badge -->
+![Node.js](https://img.shields.io/badge/Node-18.x-green)
+
+<!-- License badge -->
+![License](https://img.shields.io/github/license/ziedhannachi/playwright-tests?style=flat-square)
+
+
+
 
 > Automated testing project using Playwright and TypeScript with multi-environment support, logging, screenshots, and videos.
 
@@ -73,9 +84,6 @@ playwright-project/
 ├─ tsconfig.json
 └─ README.md
 
-yaml
-Copier le code
-
 ---
 
 ## Getting Started
@@ -88,19 +96,15 @@ Copier le code
 
 ### Install dependencies
 
-```bash
-npm install
-# or
-yarn install
-Install Playwright browsers
-bash
-Copier le code
-npx playwright install
-Configuration
+- npm install
+- Install Playwright browsers
+- npx playwright install
+
+---
+
+### Configuration
 The project uses a config file for multi-environment setup:
 
-ts
-Copier le code
 // utils/config.ts
 export default {
   recette: { baseURL: 'https://recette.example.com', email: 'qa@test.com', password: 'password123' },
@@ -109,24 +113,22 @@ export default {
 };
 You can choose the environment by setting the variable:
 
-ts
-Copier le code
 const CONFIG = ENV['prod']; // Force Prod
-Running Tests
+
+---
+
+
+### Running Tests
+
 Run all tests
-bash
-Copier le code
-npx playwright test
-Run a single test file
-bash
-Copier le code
-npx playwright test tests/login.spec.ts
-Run tests in headed mode (with browser UI)
-bash
-Copier le code
-npx playwright test --headed
-Run tests for a specific environment
-ts
-Copier le code
+- npx playwright test
+### Run a single test file
+
+- npx playwright test tests/login.spec.ts
+### Run tests in headed mode (with browser UI)
+
+- npx playwright test --headed
+### Run tests for a specific environment
+
 // In the spec
-const CONFIG = ENV['preprod'];
+- const CONFIG = ENV['preprod'];
