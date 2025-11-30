@@ -60,6 +60,7 @@ This project demonstrates a robust **automation framework** using **Playwright**
 
 ## Project Structure
 
+```text
 playwright-project/
 │
 ├─ tests/ # Test specs
@@ -84,6 +85,8 @@ playwright-project/
 ├─ tsconfig.json
 └─ README.md
 
+````
+
 ---
 
 ## Getting Started
@@ -105,6 +108,7 @@ playwright-project/
 ### Configuration
 The project uses a config file for multi-environment setup:
 
+```ts
 // utils/config.ts
 export default {
   recette: { baseURL: 'https://recette.example.com', email: 'qa@test.com', password: 'password123' },
@@ -114,6 +118,7 @@ export default {
 You can choose the environment by setting the variable:
 
 const CONFIG = ENV['prod']; // Force Prod
+````
 
 ---
 
